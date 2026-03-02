@@ -35,7 +35,7 @@ class cars{
                 Product p2=new Product("jaguar", "car426", 2500);
                 System.out.println("Displaying p2");
                 p2.display();
-                Product p3=new Product("MARUTHI", "TYTT", 2500);
+                Product p3=new Product("MARUTHI", "TYTT", 5500);
                 System.out.println("Displaying p3");
                 p3.display();
                 Product p=p3.getPrice()<(p1.price<p2.price?
