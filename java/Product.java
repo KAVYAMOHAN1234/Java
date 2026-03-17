@@ -53,9 +53,10 @@ class Cars {
         p3.display();
 
         // finding lowest price product
-        Product p = p3.getPrice() < (p1.price < p2.price ? p1.price : p2.price)
-                ? p3
-                : (p1.price < p2.price ? p1 : p2);
+        Product p = p3.getPrice() < (p1.price < p2.price ? p1.price : p2.price) //If p1.price is less than p2.price → take p1.price //Otherwise → take p2.price
+                ? p3 //If the condition is true → choose p3
+
+                : (p1.price < p2.price ? p1 : p2); //If the condition is false → choose the smaller product between p1 and p2
 
         System.out.println("Displaying product with lowest price:");
         p.display();
