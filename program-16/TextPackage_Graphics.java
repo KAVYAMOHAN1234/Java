@@ -23,5 +23,12 @@ System.out.println("Enter 3 side of triangle:");
 	
 System.out.println("Perimeter:" + tr.perimeter());
 	System.out.println("Area:" + tr.area());
-	}
+
+System.out.println("Enter length and breadth of rectangle:");
+int l = sc.nextInt();
+int br = sc.nextInt();
+Rectangle rect = new Rectangle(l, br);
+System.out.println("Perimeter: " + rect.perimeter());
+System.out.println("Area:" + rect.area());
+}
 }
