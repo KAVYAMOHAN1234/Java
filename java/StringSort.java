@@ -1,4 +1,4 @@
-import java.util.Arrays;   // import Arrays class for sorting and printing
+import java.util.Arrays;   // import Arrays class for sorting and printing (Because we need a place to store multiple strings.)
 import java.util.Scanner;  // import Scanner for user input
 
 class StringSort {
