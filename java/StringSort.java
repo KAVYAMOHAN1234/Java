@@ -2,9 +2,9 @@ import java.util.Arrays;   // import Arrays class for sorting and printing (Beca
 import java.util.Scanner;  // import Scanner for user input
 
 class StringSort {
-    public static void main(String[] args) {
+    public static void main(String[] args) { //This is where the program begins execution.
 
-        Scanner s = new Scanner(System.in); // create Scanner object
+        Scanner s = new Scanner(System.in); // create Scanner object, This line allows you to type input while running the program.
 
         // take number of strings from user
         System.out.print("Enter number of strings: ");
