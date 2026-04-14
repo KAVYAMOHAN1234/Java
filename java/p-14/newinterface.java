@@ -2,48 +2,62 @@
 //Create two classes Circle and Rectangle which implements the above interface.
 //Create a menu driven program to find area and perimeter of objects.
 
+import java.util.Scanner;  // Import Scanner for input
 
-
-import java.util.Scanner;
-
-// Interface
+// Interface with method declarations (no body)
 interface AP {
-    void area();
-    void perimeter();
+    void area();        // method to calculate area
+    void perimeter();   // method to calculate perimeter
 }
 
-// Circle
+// Circle class implementing AP interface
 class Circle implements AP {
-    double r;
-    Circle(double r) { this.r = r; }
+    double r;   // radius
 
+    // Constructor to initialize radius
+    Circle(double r) { 
+        this.r = r; 
+    }
+
+    // Method to calculate area
     public void area() {
         System.out.println("Area of Circle = " + (3.14 * r * r));
     }
 
+    // Method to calculate perimeter
     public void perimeter() {
         System.out.println("Perimeter of Circle = " + (2 * 3.14 * r));
     }
 }
 
-// Rectangle
+// Rectangle class implementing AP interface
 class Rectangle implements AP {
-    double l, b;
-    Rectangle(double l, double b) { this.l = l; this.b = b; }
+    double l, b;   // length and breadth
 
+    // Constructor
+    Rectangle(double l, double b) { 
+        this.l = l; 
+        this.b = b; 
+    }
+
+    // Area calculation
     public void area() {
         System.out.println("Area of Rectangle = " + (l * b));
     }
 
+    // Perimeter calculation
     public void perimeter() {
         System.out.println("Perimeter of Rectangle = " + (2 * (l + b)));
     }
 }
 
-// Square
+// Square class (extra, not required in question)
 class Square implements AP {
-    double a;
-    Square(double a) { this.a = a; }
+    double a;   // side
+
+    Square(double a) { 
+        this.a = a; 
+    }
 
     public void area() {
         System.out.println("Area of Square = " + (a * a));
@@ -54,19 +68,24 @@ class Square implements AP {
     }
 }
 
-// Triangle
+// Triangle class (extra, not required in question)
 class Triangle implements AP {
-    double a, b, c;
+    double a, b, c;   // sides
+
     Triangle(double a, double b, double c) {
-        this.a = a; this.b = b; this.c = c;
+        this.a = a; 
+        this.b = b; 
+        this.c = c;
     }
 
+    // Area using Heron's formula
     public void area() {
-        double s = (a + b + c) / 2;
+        double s = (a + b + c) / 2;   // semi-perimeter
         double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
         System.out.println("Area of Triangle = " + area);
     }
 
+    // Perimeter
     public void perimeter() {
         System.out.println("Perimeter of Triangle = " + (a + b + c));
     }
@@ -76,12 +95,13 @@ class Triangle implements AP {
 public class newinterface {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int ch;
+        Scanner sc = new Scanner(System.in);  // Scanner object
+        int ch;   // variable for choice
 
+        // Infinite loop for menu
         while (true) {
 
-            // YOUR REQUIRED MENU FORMAT ✅
+            // Display menu
             System.out.println("\n1:Area of circle");
             System.out.println("2:Area of Rectangle");
             System.out.println("3:Perimeter of Circle");
@@ -92,14 +112,17 @@ public class newinterface {
             System.out.println("8:Perimeter of Triangle");
             System.out.println("9:Exit");
 
+            // Take user input
             System.out.print("Enter your choice: ");
             ch = sc.nextInt();
 
+            // Switch case for menu operations
             switch (ch) {
+
                 case 1:
                     System.out.print("Enter radius: ");
-                    Circle c = new Circle(sc.nextDouble());
-                    c.area();
+                    Circle c = new Circle(sc.nextDouble()); // create object
+                    c.area();  // call area method
                     break;
 
                 case 2:
@@ -111,7 +134,7 @@ public class newinterface {
                 case 3:
                     System.out.print("Enter radius: ");
                     c = new Circle(sc.nextDouble());
-                    c.perimeter();
+                    c.perimeter();  // call perimeter
                     break;
 
                 case 4:
@@ -146,10 +169,10 @@ public class newinterface {
 
                 case 9:
                     System.out.println("Exiting...");
-                    return;
+                    return;   // exit program
 
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid choice");  // wrong input
             }
         }
     }
