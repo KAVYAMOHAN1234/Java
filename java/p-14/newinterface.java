@@ -1,3 +1,9 @@
+//Create an interface having prototypes of functions area() and perimeter().
+//Create two classes Circle and Rectangle which implements the above interface.
+//Create a menu driven program to find area and perimeter of objects.
+
+
+
 import java.util.Scanner;
 
 // Interface
